@@ -1,0 +1,10 @@
+executable   = rt_episewer_wrapper.sh
+arguments    = $(county)
+
+transfer_input_files = Rt_data_county.rds
+
+output       = output/$(county).out
+error        = output/$(county).err
+log          = logs/$(county).log
+
+queue county from county_list.txt
