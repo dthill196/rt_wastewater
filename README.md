@@ -19,9 +19,10 @@ When using code or other content from this repository, please cite the
 following:
 
 Dustin T. Hill, Yifan Zhu, Christopher Dunham, Joe Moran, Yiquan Zhou,
-Mary Collins, Brittany Kmush, and David Larsen. Translating wastewater
-surveillance data into public health terms: Methods for estimating the
-effective reproduction number (Rt). **add preprint link**
+Mary Collins, Brittany Kmush, and David Larsen. A comparative review of
+wastewater-based methods for estimating the effective reproduction
+number (Rt). Water and Health Conference. Water Research Institute, UNC
+Chapel Hill, North Carolina. (October 2024).
 
 ## EpiEstim and Rt functions
 
