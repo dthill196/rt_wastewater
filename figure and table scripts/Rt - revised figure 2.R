@@ -36,7 +36,7 @@ rt_ww_sub <- rt_ww_sub %>%
          ll_95_rt = rollmean(ll_95_rt, 5, align = "center", na.pad = TRUE),
          ul_95_rt = rollmean(ul_95_rt, 5, alidng = "center", na.pad = TRUE)
   ) %>%
-  mutate(model = "EpiEstim substitution")
+  mutate(model = "EpiEstim Substitution")
 
 # EpiSewer method - statewide
 episewer_state <- readRDS("data/episewer_state.rds") %>%
@@ -105,6 +105,7 @@ rt_state_all <- bind_rows(
 )
 
 # factor the data
+rt_state_all$method <- rt_state_all$model
 rt_state_all$method[rt_state_all$method == "Goldstein method"] <- "Goldstein - EIRR"
 rt_state_all$method[rt_state_all$method == "EpiSewer method"] <- "EpiSewer"
 rt_state_all$method[rt_state_all$method == "Rt cases"] <- "Case Rt"
@@ -136,6 +137,7 @@ values = c(c("black", "firebrick", pal),
              "Rolling GLM"))
 
 # add case counts and ww levels as a shared plot to the facets*
+dat_state <- readRDS("data/Rt_data_state.rds")
 state_add_data <-
   dat_state %>%
   group_by(week = floor_date(date, unit = "weeks")) %>%
@@ -188,9 +190,9 @@ plot_all_models <-
   theme_bw()+
   #guides(color = guide_legend(override.aes = list(linewidth= 2)))+http://127.0.0.1:26643/graphics/plot_zoom_png?width=990&height=856
   scale_x_date(labels = date_format("%b %y"),
-               date_breaks = "2 months"
+               date_breaks = "2 months",
                #, 
-               #limits = c(as.Date("2023-10-23"), as.Date("2024-01-23"))
+               limits = c(as.Date("2022-10-23"), as.Date("2024-01-23"))
                )+
   
   theme(axis.text.x = element_text(angle = 90),
@@ -223,6 +225,13 @@ p
 
 # save
 png("E:/Dropbox/CEMI/Wastewater/Papers/Reproductive number/Figures and tables/Figure - all methods statewide panel.png",
+    units = "in",
+    width = 11, height =8.5,
+    res = 600)
+p
+dev.off()
+
+png("Figure - all methods statewide panel.png",
     units = "in",
     width = 11, height =8.5,
     res = 600)
