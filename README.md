@@ -18,11 +18,9 @@ explanations and documentation of each Rt method are available in the
 When using code or other content from this repository, please cite the
 following:
 
-Dustin T. Hill, Yifan Zhu, Christopher Dunham, Joe Moran, Yiquan Zhou,
-Mary Collins, Brittany Kmush, and David Larsen. A comparative review of
-wastewater-based methods for estimating the effective reproduction
-number (Rt). Water and Health Conference. Water Research Institute, UNC
-Chapel Hill, North Carolina. (October 2024).
+Hill DT, Zhu Y, Dunham C, Moran J, Zhou Y, Collins MB, Kmush BL, Larsen DA. 
+Estimating the effective reproduction number from wastewater (Rt): 
+A methods comparison. Epidemics. 2025 Jun 18:100839.
 
 ## EpiEstim and Rt functions
 
