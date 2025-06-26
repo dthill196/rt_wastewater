@@ -21,6 +21,7 @@ following:
 Hill DT, Zhu Y, Dunham C, Moran J, Zhou Y, Collins MB, Kmush BL, Larsen DA. 
 Estimating the effective reproduction number from wastewater (Rt): 
 A methods comparison. Epidemics. 2025 Jun 18:100839.
+[https://doi.org/10.1016/j.epidem.2025.100839](https://doi.org/10.1016/j.epidem.2025.100839)
 
 ## EpiEstim and Rt functions
 
